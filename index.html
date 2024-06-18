@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple</title>
+    <style>
+      @font-face {
+        font-family: "sf";
+        src: url("images\SFPRODISPLAYREGULAR.OTF") format("otf");
+      }
+
+      .nav {
+        z-index: 9999;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height: 6vh;
+        background-color: #454545fb;
+        margin: 0px;
+        left: 0px;
+      }
+      img.logo {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        object-fit: contain;
+        top: 4px;
+        left: 250px;
+      }
+      img.cart {
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        object-fit: contain;
+        top: 15px;
+        right: 250px;
+      }
+      img.search {
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        object-fit: contain;
+        top: 15px;
+        right: 310px;
+      }
+      .store,
+      .mac,
+      .ipad,
+      .iphone,
+      .watch,
+      .tv_home,
+      .entertainment,
+      .accessories,
+      .support {
+        position: absolute;
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        top: 14px;
+        font-family: "sf", sans-serif;
+      }
+      .store {
+        position: absolute;
+        left: 330px;
+      }
+      .mac {
+        position: absolute;
+        left: 410px;
+      }
+      .ipad {
+        left: 490px;
+      }
+      .iphone {
+        left: 570px;
+      }
+      .watch {
+        left: 650px;
+      }
+      .tv_home {
+        left: 725px;
+      }
+      .entertainment {
+        left: 840px;
+      }
+      .accessories {
+        left: 975px;
+      }
+      .support {
+        left: 1100px;
+      }
+      div.offer {
+        position: absolute;
+        top: 6vh;
+        width: 100%;
+        height: 6vh;
+        background-color: #1d1d1f;
+        margin: 0px;
+        left: 0px;
+      }
+      .emi {
+        position: absolute;
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        top: 1.5px;
+        font-family: "sf", sans-serif;
+        left: 420px;
+      }
+      .shop {
+        text-decoration: none;
+        position: absolute;
+        text-decoration: none;
+        font-size: 14px;
+        top: 16px;
+        font-family: "sf", sans-serif;
+        left: 940px;
+        font-weight: 400;
+        color: #0071e3;
+      }
+      .ww {
+        position: absolute;
+        top: 12vh;
+        left: 0px;
+        height: 75vh;
+        width: 100%;
+        margin: 0px;
+        object-fit: cover;
+      }
+      .wwlogo {
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        object-fit: contain;
+        top: 63vh;
+        left: 650px;
+      }
+      .wwp {
+        position: absolute;
+        color: white;
+        top: 60vh;
+        left: 680px;
+        font-size: 40px;
+        font-family: "sf", sans-serif;
+        font-weight: 500;
+      }
+      .wwinfo {
+        position: absolute;
+        color: white;
+        top: 70vh;
+        left: 550px;
+        font-size: 27px;
+        font-family: "sf", sans-serif;
+      }
+      .keynote {
+        position: absolute;
+        text-decoration: none;
+        top: 80vh;
+        left: 640px;
+        font-size: 18px;
+        font-family: "sf", sans-serif;
+        color: #0071e3;
+      }
+      .keynote:hover,
+      .shop:hover {
+        text-decoration: underline;
+      }
+
+      .stu {
+        position: absolute;
+        top: 88.5vh;
+        left: 0px;
+        height: 75vh;
+        width: 100%;
+        margin: 0px;
+        object-fit: cover;
+      }
+      .s_title {
+        position: absolute;
+        color: white;
+        top: 131vh;
+        left: 538px;
+        font-size: 48px;
+        font-family: "sf", sans-serif;
+        font-weight: 600;
+      }
+      .s_info {
+        position: absolute;
+        color: white;
+        top: 142vh;
+        left: 630px;
+        font-size: 30px;
+        font-family: "sf", sans-serif;
+      }
+      .s_button {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: white;
+        top: 153.5vh;
+        left: 700px;
+        font-size: 18px;
+        font-family: "sf", sans-serif;
+        border: 1px solid transparent;
+        background-color: #0071e3;
+        border-radius: 25px;
+        width: 130px;
+        height: 34px;
+        padding-top: 12px;
+      }
+      .s_button:hover {
+        background-color: #0071e3ed;
+      }
+      .new {
+        position: absolute;
+        top: 700vh;
+        left: 0px;
+        height: 75vh;
+        width: 100%;
+        margin: 0px;
+      }
+      .ip_title,
+      .ip_info,
+      .ip_button1,
+      .ip_button2 {
+        position: absolute;
+      }
+      .ip {
+        position: absolute;
+        top: 165vh;
+        left: 0px;
+        height: 75vh;
+        width: 100%;
+        margin: 0px;
+        object-fit: cover;
+      }
+      .ip_title {
+        position: absolute;
+        color: #1d1d1f;
+        top: 164vh;
+        left: 625px;
+        font-size: 55px;
+        font-family: "sf", sans-serif;
+        font-weight: 550;
+      }
+      .ip_info {
+        position: absolute;
+        color: #1d1d1f;
+        top: 177vh;
+        left: 510px;
+        font-size: 30px;
+        font-family: "sf", sans-serif;
+        font-weight: 520;
+      }
+      .ip_button1 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: white;
+        top: 189vh;
+        left: 645px;
+        font-size: 18px;
+        font-family: "sf", sans-serif;
+        border: 1px solid transparent;
+        background-color: #0071e3;
+        border-radius: 25px;
+        width: 130px;
+        height: 34px;
+        padding-top: 12px;
+      }
+      .ip_button2 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: #0071e3;
+        top: 189vh;
+        left: 790px;
+        font-size: 18px;
+        font-family: "sf", sans-serif;
+        border: 1px solid #0071e3;
+        background-color: transparent;
+        border-radius: 25px;
+        width: 80px;
+        height: 34px;
+        padding-top: 12px;
+      }
+      .ip_button1:hover {
+        background-color: #0071e3ed;
+      }
+      .ip_button2:hover {
+        background-color: #0071e3;
+        border-color: #f5f5f7;
+        color: white;
+      }
+      .pro {
+        position: absolute;
+        top: 241.5vh;
+        left: 0px;
+        height: 77vh;
+        width: 48.9%;
+        margin-left: 0.7%;
+        object-fit: cover;
+      }
+
+      .pro_title {
+        position: absolute;
+        color: white;
+        top: 242vh;
+        left: 250px;
+        font-size: 35px;
+        font-family: "sf", sans-serif;
+        font-weight: 550;
+      }
+      .pro_info {
+        position: absolute;
+        color: white;
+        top: 251vh;
+        left: 205px;
+        font-size: 20px;
+        font-family: "sf", sans-serif;
+        font-weight: 520;
+      }
+      .pro_button1 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: white;
+        top: 260vh;
+        left: 270px;
+        font-size: 15px;
+        font-family: "sf", sans-serif;
+        border: 1px solid transparent;
+        background-color: #0071e3;
+        border-radius: 25px;
+        width: 110px;
+        height: 30px;
+        padding-top: 10px;
+      }
+      .pro_button2 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: #0071e3;
+        top: 260vh;
+        left: 400px;
+        font-size: 15px;
+        font-family: "sf", sans-serif;
+        border: 1px solid #0071e3;
+        background-color: transparent;
+        border-radius: 25px;
+        width: 60px;
+        height: 30px;
+        padding-top: 10px;
+      }
+      .pro_button1:hover {
+        background-color: #0071e3ed;
+      }
+      .pro_button2:hover {
+        background-color: #0071e3;
+        border-color: transparent;
+        color: white;
+      }
+      .pad {
+        position: absolute;
+        top: 241.5vh;
+        right: 0px;
+        height: 77vh;
+        width: 48.9%;
+        margin-right: 0.7%;
+        object-fit: cover;
+      }
+      .pad_title {
+        position: absolute;
+        color: white;
+        top: 242vh;
+        right: 310px;
+        font-size: 35px;
+        font-family: "sf", sans-serif;
+        font-weight: 550;
+      }
+      .pad_info {
+        position: absolute;
+        color: white;
+        top: 251vh;
+        right: 205px;
+        font-size: 20px;
+        font-family: "sf", sans-serif;
+        font-weight: 520;
+      }
+      .pad_button1 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: white;
+        top: 260vh;
+        right: 375px;
+        font-size: 15px;
+        font-family: "sf", sans-serif;
+        border: 1px solid transparent;
+        background-color: #0071e3;
+        border-radius: 25px;
+        width: 110px;
+        height: 30px;
+        padding-top: 10px;
+      }
+      .pad_button2 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: #0071e3;
+        top: 260vh;
+        right: 295px;
+
+        font-size: 15px;
+        font-family: "sf", sans-serif;
+        border: 1px solid #0071e3;
+        background-color: transparent;
+        border-radius: 25px;
+        width: 60px;
+        height: 30px;
+        padding-top: 10px;
+      }
+      .pad_button1:hover {
+        background-color: #0071e3ed;
+      }
+      .pad_button2:hover {
+        background-color: #0071e3;
+        border-color: transparent;
+        color: white;
+      }
+
+      .air {
+        position: absolute;
+        top: 320vh;
+        left: 0px;
+        height: 77vh;
+        width: 48.9%;
+        margin-left: 0.7%;
+        object-fit: cover;
+      }
+      .airimg {
+        position: absolute;
+        height: 40px;
+        width: 60px;
+        object-fit: contain;
+        top: 325vh;
+        left: 385px;
+      }
+      .air_title {
+        position: absolute;
+        color: #1d1d1f;
+        top: 320.5vh;
+        left: 305px;
+        font-size: 35px;
+        font-family: "sf", sans-serif;
+        font-weight: 550;
+      }
+      .air_info {
+        position: absolute;
+        color: #1d1d1f;
+        top: 329.5vh;
+        left: 225px;
+        font-size: 20px;
+        font-family: "sf", sans-serif;
+        font-weight: 520;
+      }
+      .air_button1 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: white;
+        top: 337.5vh;
+        left: 280px;
+        font-size: 15px;
+        font-family: "sf", sans-serif;
+        border: 1px solid transparent;
+        background-color: #1d1d1f;
+        border-radius: 25px;
+        width: 110px;
+        height: 30px;
+        padding-top: 10px;
+      }
+      .air_button2 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: #1d1d1f;
+        top: 337.5vh;
+        left: 410px;
+        font-size: 15px;
+        font-family: "sf", sans-serif;
+        border: 1px solid #1d1d1f;
+        background-color: transparent;
+        border-radius: 25px;
+        width: 60px;
+        height: 30px;
+        padding-top: 10px;
+      }
+      .air_button1:hover {
+        background-color: #1d1d1fef;
+      }
+      .air_button2:hover {
+        background-color: #1d1d1f;
+        border-color: transparent;
+        color: white;
+      }
+      .mc {
+        position: absolute;
+        top: 320vh;
+        right: 0px;
+        height: 77vh;
+        width: 48.9%;
+        margin-right: 0.7%;
+        object-fit: cover;
+      }
+      .mc_title {
+        position: absolute;
+        color: #1d1d1f;
+        top: 320.5vh;
+        right: 270px;
+        font-size: 35px;
+        font-family: "sf", sans-serif;
+        font-weight: 550;
+      }
+      .mc_info {
+        position: absolute;
+        color: #1d1d1f;
+        top: 329.5vh;
+        right: 280px;
+        font-size: 20px;
+        font-family: "sf", sans-serif;
+        font-weight: 520;
+      }
+      .mc_button1 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: white;
+        top: 337.5vh;
+        right: 360px;
+        font-size: 15px;
+        font-family: "sf", sans-serif;
+        border: 1px solid transparent;
+        background-color: #0071e3;
+        border-radius: 25px;
+        width: 110px;
+        height: 30px;
+        padding-top: 10px;
+      }
+      .mc_button2 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: #0071e3;
+        top: 337.5vh;
+        right: 285px;
+        font-size: 15px;
+        font-family: "sf", sans-serif;
+        border: 1px solid #0071e3;
+        background-color: transparent;
+        border-radius: 25px;
+        width: 60px;
+        height: 30px;
+        padding-top: 10px;
+      }
+      .mc_button1:hover {
+        background-color: #0071e3ed;
+      }
+      .mc_button2:hover {
+        background-color: #0071e3;
+        border-color: transparent;
+        color: white;
+      }
+
+      .uw {
+        position: absolute;
+        top: 398.5vh;
+        left: 0px;
+        height: 77vh;
+        width: 48.9%;
+        margin-left: 0.7%;
+        object-fit: cover;
+      }
+      .blk_logo {
+        position: absolute;
+        top: 401.5vh;
+        left: 285px;
+        height: 55px;
+        width: 55px;
+        object-fit: cover;
+      }
+      .uw_title {
+        position: absolute;
+        color: #1d1d1f;
+        top: 399vh;
+        left: 330px;
+        font-size: 33px;
+        font-family: "sf", sans-serif;
+        font-weight: 550;
+      }
+      .uw_subtitle {
+        position: absolute;
+        color: #f9632e;
+        top: 406.5vh;
+        left: 348px;
+        font-size: 15px;
+        font-family: "sf", sans-serif;
+        font-weight: 550;
+      }
+      .uw_info {
+        position: absolute;
+        color: #1d1d1f;
+        top: 408.5vh;
+        left: 280px;
+        font-size: 20px;
+        font-family: "sf", sans-serif;
+        font-weight: 520;
+      }
+      .uw_button1 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: white;
+        top: 417vh;
+        left: 278px;
+        font-size: 15px;
+        font-family: "sf", sans-serif;
+        border: 1px solid transparent;
+        background-color: #0071e3;
+        border-radius: 25px;
+        width: 110px;
+        height: 30px;
+        padding-top: 10px;
+      }
+      .uw_button2 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: #0071e3;
+        top: 417vh;
+        left: 406px;
+        font-size: 15px;
+        font-family: "sf", sans-serif;
+        border: 1px solid #0071e3;
+        background-color: transparent;
+        border-radius: 25px;
+        width: 60px;
+        height: 30px;
+        padding-top: 10px;
+      }
+      .uw_button1:hover {
+        background-color: #0071e3ed;
+      }
+      .uw_button2:hover {
+        background-color: #0071e3;
+        border-color: transparent;
+        color: white;
+      }
+      .trd {
+        position: absolute;
+        top: 398.5vh;
+        right: 0px;
+        height: 77vh;
+        width: 48.9%;
+        margin-right: 0.7%;
+        object-fit: cover;
+      }
+      .blk_logo_trd {
+        position: absolute;
+        top: 401.5vh;
+        right: 400px;
+        height: 55px;
+        width: 55px;
+        object-fit: cover;
+      }
+      .trd_title {
+        position: absolute;
+        color: #1d1d1f;
+        top: 399vh;
+        right: 285px;
+        font-size: 33px;
+        font-family: "sf", sans-serif;
+        font-weight: 550;
+      }
+      .trd_info {
+        position: absolute;
+        color: #1d1d1f;
+        top: 407vh;
+        right: 218px;
+        font-size: 20px;
+        font-family: "sf", sans-serif;
+        font-weight: 520;
+      }
+      .trd_button1 {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        color: white;
+        top: 415vh;
+        right: 288px;
+        font-size: 15px;
+        font-family: "sf", sans-serif;
+        border: 1px solid transparent;
+        background-color: #0071e3;
+        border-radius: 25px;
+        width: 150px;
+        height: 30px;
+        padding-top: 10px;
+      }
+      .trd_button1:hover {
+        background-color: #0071e3ed;
+      }
+
+      .image-slider {
+        position: absolute;
+        top: 477vh;
+        left: 0;
+        height: 96.5vh;
+        width: 100%;
+        margin: 0;
+        background-color: #454545fb;
+      }
+
+      .slideimage {
+        position: absolute;
+        object-fit: contain;
+        top: 0vh;
+        left: 9%;
+        width: 90%;
+        height: 100vh;
+        opacity: 0;
+        animation: fade 64s infinite;
+        animation-fill-mode: forwards;
+        margin: 0;
+      }
+
+      .slideimage:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      .slideimage:nth-child(2) {
+        animation-delay: 8s;
+      }
+
+      .slideimage:nth-child(3) {
+        animation-delay: 16s;
+      }
+
+      .slideimage:nth-child(4) {
+        animation-delay: 24s;
+      }
+
+      .slideimage:nth-child(5) {
+        animation-delay: 32s;
+      }
+
+      .slideimage:nth-child(6) {
+        animation-delay: 40s;
+      }
+
+      .slideimage:nth-child(7) {
+        animation-delay: 48s;
+      }
+
+      .slideimage:nth-child(8) {
+        animation-delay: 56s;
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        20% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        95% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .footer {
+        position: absolute;
+        top: 576vh;
+        left: 0px;
+        height: 40vh;
+        width: 100%;
+        margin: 0px;
+        background-color: #f5f5f7;
+      }
+      .end {
+        position: absolute;
+        top: 0vh;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        margin-top: 5vh;
+        font-family: "sf", sans-serif;
+        text-align: justify;
+        font-size: 13px;
+        color: #6c6c6d;
+        width: 70vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="#"><img class="logo" src="images\logo.png" /></a>
+      <a class="store" href="#">Store</a>
+      <a class="mac" href="#">Mac</a>
+      <a class="ipad" href="#">iPad</a>
+      <a class="iphone" href="#">iPhone</a>
+      <a class="watch" href="#">Watch</a>
+      <a class="tv_home" href="#">Tv & Home</a>
+      <a class="entertainment" href="#">Entertainment</a>
+      <a class="accessories" href="#">Accessories</a>
+      <a class="support" href="#">Support</a>
+      <a href="#"><img class="search" src="images\search.png" /></a>
+      <a href="#"><img class="cart" src="images\cart.png" /></a>
+    </div>
+    <div class="offer">
+      <p class="emi">
+        Get up to 24 months No Cost EMI on all iPhone models from most leading
+        banks.‡
+      </p>
+      <a class="shop" href="#">Shop now &nbsp;&gt;</a>
+    </div>
+    <div class="wwdc">
+      <a href="#"><img class="wwlogo" src="images\logo.png" /></a>
+      <a href="#"
+        ><img class="ww" src="images\wwdc.jpeg" />
+
+        <p class="wwp">WWDC24</p>
+        <p class="wwinfo">See everything announced at the event.</p></a
+      >
+      <a class="keynote" href="#">Watch the keynote on our US site&nbsp;&gt;</a>
+    </div>
+    <div class="student">
+      <a href="#"
+        ><img class="stu" src="images\students.jpeg" />
+        <p class="s_title">University Students</p>
+        <p class="s_info">Go further with Mac.</p></a
+      >
+      <a class="s_button" href="#">&nbsp;Learn more&nbsp;</a>
+    </div>
+    <div class="ippic">
+      <a href="#"
+        ><img class="ip" src="images\iphone.jpeg" />
+        <p class="ip_title">iPhone 15</p>
+        <p class="ip_info">New camera. New design. Newphoria.</p></a
+      >
+      <a class="ip_button1" href="#">&nbsp;Learn more&nbsp;</a>
+      <a class="ip_button2" href="#">&nbsp;Buy&nbsp;</a>
+    </div>
+    <div class="ippro">
+      <a href="#"
+        ><img class="pro" src="images\tita.jpeg" />
+        <p class="pro_title">iPhone 15 Pro</p>
+        <p class="pro_info">Titanium. So strong. So light. So Pro.</p></a
+      >
+      <a class="pro_button1" href="#">&nbsp;Learn more&nbsp;</a>
+      <a class="pro_button2" href="#">&nbsp;Buy&nbsp;</a>
+    </div>
+    <div class="ipadpro">
+      <a href="#"
+        ><img class="pad" src="images\ipadpro.jpeg" />
+        <p class="pad_title">iPad Pro</p>
+        <p class="pad_info">Unbelievably thin. Incredibly powerful.</p></a
+      >
+      <a class="pad_button1" href="#">&nbsp;Learn more&nbsp;</a>
+      <a class="pad_button2" href="#">&nbsp;Buy&nbsp;</a>
+    </div>
+    <div class="ipadair">
+      <a href="#"
+        ><img class="air" src="images\ipad.jpeg" />
+        <p class="air_title">iPad</p>
+        <p class="air_info">Two sizes. Faster chip. Does it all.</p>
+        <img class="airimg" src="images\air.png"
+      /></a>
+
+      <a class="air_button1" href="#">&nbsp;Learn more&nbsp;</a>
+      <a class="air_button2" href="#">&nbsp;Buy&nbsp;</a>
+    </div>
+    <div class="macbook">
+      <a href="#"
+        ><img class="mc" src="images\mac.jpg" />
+        <p class="mc_title">MacBook Air</p>
+        <p class="mc_info">Supercharged by M3.</p></a
+      >
+      <a class="mc_button1" href="#">&nbsp;Learn more&nbsp;</a>
+      <a class="mc_button2" href="#">&nbsp;Buy&nbsp;</a>
+    </div>
+    <div class="ultra">
+      <a href="#"
+        ><img class="uw" src="images\watch.jpeg" />
+        <p class="uw_title">WATCH</p>
+        <p class="uw_subtitle">ULTRA 2</p>
+        <p class="uw_info">Next-level adventure.</p>
+        <img class="blk_logo" src="images\blacklogo.png"
+      /></a>
+      <a class="uw_button1" href="#">&nbsp;Learn more&nbsp;</a>
+      <a class="uw_button2" href="#">&nbsp;Buy&nbsp;</a>
+    </div>
+    <div class="trade">
+      <a href="#"
+        ><img class="trd" src="images\trade.jpeg" />
+        <p class="trd_title">Trade In</p>
+        <p class="trd_info">Upgrade and save. It's that easy.</p>
+        <img class="blk_logo_trd" src="images\blacklogo.png"
+      /></a>
+      <a class="trd_button1" href="#">&nbsp;Get your estimate&nbsp;</a>
+    </div>
+
+    <div class="image-slider">
+      <div class="slideimage">
+        <a href="#"> <img src="images\img2.jpeg" alt="Image 2" /></a>
+      </div>
+      <div class="slideimage">
+        <a href="#"> <img src="images\img3.jpeg" alt="Image 3" /></a>
+      </div>
+      <div class="slideimage">
+        <a href="#"> <img src="images\img4.jpeg" alt="Image 4" /></a>
+      </div>
+      <div class="slideimage">
+        <a href="#"> <img src="images\img5.jpeg" alt="Image 5" /></a>
+      </div>
+      <div class="slideimage">
+        <a href="#"> <img src="images\img6.jpeg" alt="Image 6" /></a>
+      </div>
+      <div class="slideimage">
+        <a href="#"> <img src="images\img7.jpeg" alt="Image 7" /></a>
+      </div>
+      <div class="slideimage">
+        <a href="#"> <img src="images\img8.jpeg" alt="Image 8" /></a>
+      </div>
+      <div class="slideimage">
+        <a href="#"> <img src="images\img9.jpeg" alt="Image 9" /></a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p class="end">
+        ‡No Cost EMI is available with the purchase of an eligible product made
+        using qualifying cards on 3- or 6-month tenures from most leading banks.
+        Until 6 August 2024, No Cost EMI is available with the purchase of an
+        eligible iPhone made using qualifying cards on 3-, 6-, 9-, 12-, 18- or
+        24-month tenures from most leadings banks. Monthly pricing is rounded to
+        the nearest rupee. Exact pricing will be provided by your bank, subject
+        to your bank's terms and conditions. Minimum order spend applies as per
+        your card-issuing bank threshold. Offer cannot be combined with Apple
+        Store for Education or Corporate Employee Purchase Plan pricing. Card
+        eligibility is subject to terms and conditions between you and your
+        card-issuing bank. Offer may be revised or withdrawn at any time without
+        any prior notice. Terms apply.<br /><br />
+        Representative example:<br /><br />
+        Based off a 6-month tenure. ₹79900.00 total cost includes 15% p.a. and
+        No Cost EMI savings of ₹3380.00, paid over 6 months as six monthly
+        payments of ₹13317.00.<br /><br />
+        Based off a 24-month tenure. ₹79900.00 total cost includes 15% p.a. and
+        No Cost EMI savings of ₹11242.00, paid over 24 months as 24 monthly
+        payments of ₹3329.00.<br /><br />
+        A subscription is required for Apple TV+.
+      </p>
+    </div>
+  </body>
+</html>
