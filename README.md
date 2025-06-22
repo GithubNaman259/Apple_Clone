@@ -1,4 +1,4 @@
-# 🍎 Apple Landing Page Clone | HTML & CSS
+# 📱Apple Landing Page Clone | HTML & CSS
 
 A **static clone** of the **Apple official website landing page** created using only HTML and CSS. This project focuses on foundational front-end web development skills including layout design, clean CSS styling, and basic animation effects.
 
@@ -23,8 +23,8 @@ A **static clone** of the **Apple official website landing page** created using 
 
 - 🔷 Pixel-accurate imitation of Apple’s modern landing page layout
 - 🖼️ Hero section and featured product displays
-- 🎯 Clear call-to-action buttons and marketing tiles
-- 🎨 Smooth CSS transitions and hover animations for interactive feedback
+- 🎞️ Animated image slider section using CSS-only transitions
+- 🎨 Smooth CSS hover animations and transitions for buttons
 - 🧹 Organized, semantic HTML and modular CSS for easy maintenance
 
 ---
