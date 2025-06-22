@@ -28,6 +28,3 @@ A **static clone** of the **Apple official website landing page** created using 
 - 🧹 Organized, semantic HTML and modular CSS for easy maintenance
 
 ---
-
-## 🗂️ Folder Structure
-
