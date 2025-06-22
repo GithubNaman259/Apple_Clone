@@ -2,7 +2,7 @@
 
 A **static clone** of the **Apple official website landing page** created using only HTML and CSS. This project focuses on foundational front-end web development skills including layout design, clean CSS styling, and basic animation effects.
 
-🔗 **Live Webpage:** [Click Here](https://githubnaman259.github.io/Linkedin_Clone/)
+🔗 **Live Webpage:** [Click Here](https://githubnaman259.github.io/Apple_Clone/)
 
 ---
 
